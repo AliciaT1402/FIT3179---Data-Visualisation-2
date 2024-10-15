@@ -1,7 +1,12 @@
 
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Total Co2 Emissions in 2022"},
+    "title": { 
+      "text": "Total Co2 Emissions in 2022",
+      "font": "Garamond",
+      "fontSize": 25,
+      "color": "#6c1220"
+    },
     "width": 350,
     "height": 350,
     "data": {

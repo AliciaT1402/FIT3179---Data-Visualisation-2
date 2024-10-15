@@ -1,8 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Tourists Spending in 2018" },
-    "width": 130,
-    "height": 150,
+    "title": { 
+        "text": "Tourists Spending in 2018",
+        "font": "Garamond",
+        "fontSize": 12,
+        "color": "#6c1220"
+ },
+    "width": 30,
+    "height": 30,
     "data": {
       "url": "https://raw.githubusercontent.com/AliciaT1402/FIT3179-DataVisualisation2/main/data/GlobalExpenditure.csv"
     },
@@ -46,13 +51,14 @@
     },
     "layer": [
       {
-        "mark": { "type": "arc", "innerRadius": 90 }
+        "mark": { "type": "arc", "innerRadius": 30 }
       },
       {
         "mark": {
           "type": "text",
+          "size":"5",
           "color": "#000000",
-          "radius": 150,
+          "radius": 55,
           "align": "center",
           "baseline": "middle"
         },
