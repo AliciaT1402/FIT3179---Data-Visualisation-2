@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Tourists Spending in 2021" },
+    "width": 130,
+    "height": 150,
+    "data": {
+      "url": "https://raw.githubusercontent.com/AliciaT1402/FIT3179-DataVisualisation2/main/data/GlobalExpenditure.csv"
+    },
+    "transform": [
+      { "filter": "datum.Year == 2021" },
+      {
+        "window": [
+          { "op": "rank", "as": "rank" }
+        ],
+        "sort": [{ "field": "Amount (in millions)", "order": "descending" }]
+      }
+    ],
+    "encoding": {
+      "theta": {
+        "field": "Amount (in millions)",
+        "type": "quantitative",
+        "sort": "descending",
+        "stack": true
+      },
+      "color": {
+        "field": "rank",
+        "type": "ordinal",
+        "scale": {
+          "domain": [1, 2, 3, 4, 5, 6, 7],
+          "range": [
+            "#f2f2f2",
+            "#e43d12",
+            "#efb11d",
+            "#d6536d",
+            "#b4b4b3",
+            "#c7c7c6",
+            "#d9d9d9"
+          ]
+        },
+        "legend": null
+      },
+      "tooltip": [
+        { "field": "Commodity", "type": "nominal", "title": "Commodity" },
+        { "field": "Amount (in millions)", "type": "quantitative", "title": "Amount Spent (in millions)", "format": "," }
+      ]
+    },
+    "layer": [
+      {
+        "mark": { "type": "arc", "innerRadius": 90 }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "color": "#000000",
+          "radius": 160,
+          "align": "center",
+          "baseline": "middle"
+        },
+        "encoding": {
+          "text": { "field": "Commodity", "type": "nominal" }
+        }
+      }
+    ]
+}
