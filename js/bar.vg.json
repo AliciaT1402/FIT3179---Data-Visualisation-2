@@ -1,0 +1,32 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Total Co2 Emissions in 2022"},
+    "width": 350,
+    "height": 350,
+    "data": {
+      "url": "https://raw.githubusercontent.com/AliciaT1402/FIT3179-DataVisualisation2/main/data/co2Emissions.csv"
+    },
+    "mark": {
+    "type": "bar",
+    "color": "#efb11d"
+  },
+    "transform": [
+      {
+        "filter": "datum.Year == 2022"
+      }
+    ],
+    "encoding": {
+      "x": { "field": "Total Emissions", "type": "quantitative", "title":"Total Emissions" },
+      "y": { "field": "Entity", "type": "nominal", "title":null}
+    },
+    "tooltip": [
+      { "field": "Entity", "type": "nominal", "title": "Country" },
+      {
+        "field": "Total Emissions",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Avg Length of Stay"
+      }
+    ]
+  }
