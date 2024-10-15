@@ -34,7 +34,7 @@
           "lookup": "properties.ISO_A3",
           "from": {
             "data": {
-              "url": "intArrivals(edit).csv",
+              "url": "https://raw.githubusercontent.com/AliciaT1402/FIT3179-DataVisualisation2/main/data/intArrivals.csv",
               "format": {"type": "csv"}
             },
             "key": "Code",
