@@ -10,31 +10,57 @@
 
     <title>FIT3179-DV2</title>
 
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
   </head>
 
   <body>
-    <h1>World Tourism</h1>
+    <div class="title-container"><h1>A Global Exploration on Tourism Trends</h1></div>
 
-    <div class="charts-container">
-      <!-- Div for the map visualization -->
-      <div id="map"></div>
-
-      <!-- Descriptive text -->
-      <p class="description">
-        Tourism drives a country's economy. Especially after the global pandemic, we know how impactful tourism is to the economy. 
-        It generates jobs, fosters community development, and enhances cultural exchange. As countries recover, focusing on tourism 
-        can be a critical factor in reviving economies.
+    <p class="description">
+        <b>Tourism drives a country's economy.</b> Especially after the global pandemic, we know how impactful tourism is to the economy. 
+        It <b>generates jobs</b>, <b>fosters community development</b>, and <b>enhances cultural exchange</b>. As countries recover, focusing on tourism 
+        can be a <b>critical factor in reviving economies.</b>
       </p>
 
-      <!-- Container for line and bar charts -->
+    <div class="map-container">
+      <div id="map">
+    </div>
+    
+      <div class="description-container">
+        <p class="description">
+            This map visualises the <b>latest records</b> of the number of international arrivals per country, 
+            illustrating <b>post-pandemic travel data</b>. Color shades <b>highlights the popularity</b> of the destinations.
+        </p>
+      </div>
+
       <div class="charts-row">
         <div id="line_chart"></div>
         <div id="bar_chart"></div>
       </div>
 
-      <!-- Container for pie charts -->
+      <div class="description-container">
+        <p class="description">
+            Average number of days tourists stay in the <b>most popular countries</b>.
+            This illustrates <b>travel patterns</b> for extended stays in different countries. <br><br><br>
+            C02 emissions for the most popular countries. This highlights the <b>importance of
+                sustainability</b>, especially in the tourism sector of business.
+        </p>
+        
+      </div>
+
+      <br><br>
+
+      <div class="title-container">
+        <h2>Breakdown of Tourist Spendings</h2>
+    </div>
+
+    <div class="description-container">
+        <p class="description">
+            This map visualises the <b>latest records</b> of the number of international arrivals per country, 
+            illustrating <b>post-pandemic travel data</b>. Color shades <b>highlights the popularity</b> of the destinations.
+        </p>
+      </div> <br><br>
+
       <div class="pie-charts-container">
         <div id="donut1_chart"></div>
         <div id="donut2_chart"></div>
@@ -44,14 +70,23 @@
       </div>
     </div>
 
-    <!-- Embed the JS files for the visualizations -->
-    <script src="js/map.js"></script>
-    <script src="js/line.js"></script>
-    <script src="js/bar.js"></script>
-    <script src="js/ge18.js"></script>
-    <script src="js/ge19.js"></script>
-    <script src="js/ge20.js"></script>
-    <script src="js/ge21.js"></script>
-    <script src="js/ge22.js"></script>
+    <script type="text/javascript">
+        var chart1 = "js/map.vg.json";
+        var chart2 = "js/line.vg.json";
+        var chart3 = "js/bar.vg.json";
+        var chart4 = "js/ge18.vg.json";
+        var chart5 = "js/ge19.vg.json";
+        var chart6 = "js/ge20.vg.json";
+        var chart7 = "js/ge21.vg.json";
+        var chart8 = "js/ge22.vg.json";
+        vegaEmbed("#map", chart1, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#line_chart", chart2, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#bar_chart", chart3, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#donut1_chart", chart4, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#donut2_chart", chart5, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#donut3_chart", chart6, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#donut4_chart", chart7, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#donut5_chart", chart8, { actions: false }, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+      </script>
   </body>
 </html>

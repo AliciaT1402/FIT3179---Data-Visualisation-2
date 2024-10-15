@@ -1,6 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Length of Stay",
+  "title": {
+    "text":"Average Length of Stay",
+    "font": "Garamond",
+    "fontSize": 25,
+    "color": "#6c1220"
+  },
   "width": 350,
   "height": 350,
   "description": "Average Length of Stay by Country (2015 onwards).",

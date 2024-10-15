@@ -1,7 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "International Tourists per Country in 2022",
-  "width": 750,
+  "title": {
+    "text" : "International Tourists per Country in 2022",
+    "font": "Garamond",
+    "fontSize": 25,
+    "color": "#6c1220"
+},
+  "width": 900,
   "height": 400,
   "projection": {"type": "equirectangular"},
   "data": {
